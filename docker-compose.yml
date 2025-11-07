@@ -1,0 +1,79 @@
+version: '3.8'
+
+services:
+  arb-bot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: arb-bot-secure
+    restart: unless-stopped
+    
+    environment:
+      - ENVIRONMENT=production
+      - LOG_LEVEL=INFO
+      - TZ=UTC
+    
+    env_file:
+      - .env
+    
+    volumes:
+      # Config (read-only для безопасности)
+      - ./config:/app/config:ro
+      # Data (read-write для БД)
+      - ./data:/app/data
+      # Logs (read-write)
+      - ./logs:/app/logs
+      # Reports (read-write)
+      - ./data/reports:/app/data/reports
+    
+    networks:
+      - arb-network
+    
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    
+    healthcheck:
+      test: ["CMD", "python", "-c", "from pathlib import Path; exit(0 if Path('data/arb_bot.db').exists() else 1)"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    
+    # Resource limits
+    deploy:
+      resources:
+        limits:
+          cpus: '2.0'
+          memory: 1G
+        reservations:
+          cpus: '0.5'
+          memory: 512M
+
+  # Redis для кэширования (опционально)
+  redis:
+    image: redis:7-alpine
+    container_name: arb-bot-redis
+    restart: unless-stopped
+    command: redis-server --appendonly yes --maxmemory 256mb --maxmemory-policy allkeys-lru
+    ports:
+      - "6379:6379"
+    networks:
+      - arb-network
+    volumes:
+      - redis-data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 3
+
+networks:
+  arb-network:
+    driver: bridge
+
+volumes:
+  redis-data:
+    driver: local

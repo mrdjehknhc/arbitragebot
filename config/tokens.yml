@@ -1,0 +1,94 @@
+# ==================== ТОКЕНЫ ДЛЯ ТОРГОВЛИ ====================
+
+# Базовые токены (всегда включены)
+base_tokens:
+  - BTC
+  - ETH
+  - USDT
+  - USDC
+  - BNB
+
+# Дополнительные токены (популярные альткоины)
+additional_tokens:
+  - SOL
+  - XRP
+  - ADA
+  - DOGE
+  - MATIC
+  - DOT
+  - AVAX
+  - LINK
+  - UNI
+  - ATOM
+  - LTC
+  - BCH
+  - XLM
+  - ALGO
+  - VET
+  - FIL
+  - TRX
+  - ETC
+  - NEAR
+  - APT
+  - ARB
+  - OP
+  - GALA
+  - SAND
+  - MANA
+  - AXS
+  - CHZ
+  - ENJ
+  - THETA
+  - FTM
+
+# Стейблкоины (для арбитража)
+stablecoins:
+  - USDT
+  - USDC
+  - BUSD
+  - DAI
+  - TUSD
+  - USDD
+  - USDP
+
+# Минимальный объем торгов за 24ч (в USD)
+min_24h_volume_usd: 1000000
+
+# Черный список (проблемные токены)
+blacklist:
+  - LUNC      # Luna Classic (скам история)
+  - USTC      # TerraUSD Classic (депег)
+  - FTT       # FTX Token (банкротство)
+  - LUNA      # Terra Luna (обвал)
+  - RESOLV    # Проблемы с ликвидностью
+  - WBTC      # Обернутый BTC (для упрощения)
+  - WETH      # Обернутый ETH (для упрощения)
+  
+# Настройки фильтрации
+filters:
+  # Минимальная рыночная капитализация (USD)
+  min_market_cap: 100000000 # $100M
+  
+  # Максимальная волатильность (% за 24ч)
+  max_volatility_24h: 30  # 30%
+  
+  # Минимальная ликвидность в orderbook
+  min_orderbook_depth: 10000  # $10k
+  
+  # Только spot торговля
+  only_spot: true
+  
+  # Исключить токены с префиксом
+  exclude_prefixes:
+    - BEAR
+    - BULL
+    - UP
+    - DOWN
+    - HEDGE
+  
+  # Исключить токены с суффиксом  
+  exclude_suffixes:
+    - 3L
+    - 3S
+    - 5L
+    - 5S

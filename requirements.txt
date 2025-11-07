@@ -1,0 +1,31 @@
+# Core
+ccxt==4.2.25
+python-dotenv==1.0.0
+pyyaml==6.0.1
+requests==2.31.0
+pulp
+
+# Optimization
+numpy==1.26.3
+pandas
+scipy
+
+# Database
+sqlalchemy==2.0.25
+
+# Telegram
+python-telegram-bot==20.7
+
+# Logging & Monitoring
+loguru==0.7.2
+
+# Utilities
+pytz==2023.3
+cryptography==41.0.7
+
+# Testing
+pytest==7.4.3
+pytest-asyncio==0.21.1
+
+# Docker
+gunicorn==21.2.0

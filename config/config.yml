@@ -1,0 +1,117 @@
+# ==================== БИРЖИ ====================
+
+exchanges:
+  bybit:
+    enabled: true
+    api_key_env: "BYBIT_API_KEY"
+    api_secret_env: "BYBIT_API_SECRET"
+    testnet: false
+    type: spot
+
+  binance:
+    enabled: false
+    api_key_env: "BINANCE_API_KEY"
+    api_secret_env: "BINANCE_API_SECRET"
+    testnet: false
+    type: spot
+
+  okx:
+    enabled: false
+    api_key_env: "OKX_API_KEY"
+    api_secret_env: "OKX_API_SECRET"
+    passphrase_env: "OKX_PASSPHRASE"
+    testnet: false
+    type: spot
+
+  kucoin:
+    enabled: true  # Отключен по умолчанию
+    api_key_env: "KUCOIN_API_KEY"
+    api_secret_env: "KUCOIN_API_SECRET"
+    passphrase_env: "KUCOIN_PASSPHRASE"
+    testnet: false
+    type: spot
+
+  gateio:
+    enabled: false  # Отключен по умолчанию
+    api_key_env: "GATEIO_API_KEY"
+    api_secret_env: "GATEIO_API_SECRET"
+    testnet: false
+    type: spot
+
+# ==================== СТРАТЕГИЯ ====================
+
+strategy:
+  type: cross_exchange  # triangular, cross_exchange, multi_hop
+  max_path_length: 4
+  min_profit_percent: 1.5
+  include_fees: true
+  include_slippage: true
+  slippage_percent: 0.1
+  inter_exchange_trading: false  # Межбиржевой арбитраж (пока отключен)
+
+# ==================== ТОРГОВЛЯ ====================
+
+trading:
+  auto_execute: true  # ❌ false для безопасности! Включи только после теста
+  trade_size_usd: 100
+  max_trade_size_usd: 500
+  order_timeout_seconds: 30
+  order_type: limit
+  limit_price_offset_percent: 0.05
+
+# ==================== RISK MANAGEMENT ====================
+
+risk:
+  max_trade_size_usd: 1000
+  max_daily_trades: 100
+  max_daily_loss_usd: 100
+  min_balance_usd: 100
+  max_consecutive_losses: 5
+  max_slippage_percent: 0.5
+  emergency_stop_loss_percent: 5
+  max_execution_time: 5.0
+  min_liquidity_usd: 10000
+
+# ==================== МОНИТОРИНГ ====================
+
+monitoring:
+  scan_interval_seconds: 5  # Сканировать каждые 5 сек
+  balance_update_interval_seconds: 60
+  log_level: DEBUG  # DEBUG, INFO, WARNING, ERROR
+  save_opportunities: true
+  save_trades: true
+
+# ==================== TELEGRAM ====================
+
+telegram:
+  enabled: true
+  bot_token_env: "TELEGRAM_BOT_TOKEN"
+  chat_id_env: "TELEGRAM_CHAT_ID"     
+  
+  notifications:
+    opportunities: true
+    trades: true
+    errors: true
+    daily_report: true
+    weekly_report: true
+    monthly_report: true
+  
+  min_profit_to_notify_percent: 1.5
+  daily_report_time_utc: "00:00"
+  weekly_report_day: monday
+  monthly_report_day: 1
+
+# ==================== БЕЗОПАСНОСТЬ ====================
+
+security:
+  encrypt_api_keys: true
+  use_ip_whitelist: true
+  disable_withdrawal: true
+
+# ==================== ПРОИЗВОДИТЕЛЬНОСТЬ ====================
+
+performance:
+  num_threads: 4
+  enable_multiprocessing: true
+  cache_enabled: true
+  cache_ttl_seconds: 10
