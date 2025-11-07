@@ -1,0 +1,260 @@
+2025-11-07 19:48:35 | INFO     | __main__:__init__:29 | 🚀 Initializing Enhanced Arbitrage Bot v3...
+2025-11-07 19:48:35 | INFO     | src.exchanges:_create_exchange:73 | 🔑 BYBIT: API keys loaded
+2025-11-07 19:48:35 | INFO     | src.exchanges:_init_exchanges:52 | ✅ BYBIT initialized successfully
+2025-11-07 19:48:35 | INFO     | src.exchanges:_init_exchanges:34 | Exchange binance is disabled in config
+2025-11-07 19:48:35 | INFO     | src.exchanges:_init_exchanges:34 | Exchange okx is disabled in config
+2025-11-07 19:48:35 | INFO     | src.exchanges:_create_exchange:73 | 🔑 KUCOIN: API keys loaded
+2025-11-07 19:48:35 | INFO     | src.exchanges:_init_exchanges:52 | ✅ KUCOIN initialized successfully
+2025-11-07 19:48:35 | INFO     | src.exchanges:_init_exchanges:34 | Exchange gateio is disabled in config
+2025-11-07 19:48:35 | INFO     | __main__:__init__:49 | ✅ Bot v3 initialized successfully
+2025-11-07 19:48:35 | INFO     | __main__:__init__:52 | ⚡ Async mode ENABLED (faster!)
+2025-11-07 19:48:35 | INFO     | __main__:start_async:74 | ▶️  Starting bot (async mode)...
+2025-11-07 19:48:35 | INFO     | __main__:test_connections_async:315 | 🔌 Testing exchange connections...
+2025-11-07 19:48:36 | INFO     | src.services.exchange_connector:__init__:548 | 🌐 MultiExchangeConnector initialized
+2025-11-07 19:48:36 | INFO     | src.services.exchange_connector:__init__:61 | 📡 ExchangeConnector initialized for BYBIT
+2025-11-07 19:48:38 | INFO     | src.services.exchange_connector:initialize:80 | ✅ BYBIT connected: 2772 symbols
+2025-11-07 19:48:38 | INFO     | src.services.exchange_connector:initialize:559 | ⏭️  BINANCE disabled in config
+2025-11-07 19:48:38 | INFO     | src.services.exchange_connector:initialize:559 | ⏭️  OKX disabled in config
+2025-11-07 19:48:38 | INFO     | src.services.exchange_connector:__init__:61 | 📡 ExchangeConnector initialized for KUCOIN
+2025-11-07 19:48:45 | INFO     | src.services.exchange_connector:initialize:80 | ✅ KUCOIN connected: 1287 symbols
+2025-11-07 19:48:45 | INFO     | src.services.exchange_connector:initialize:559 | ⏭️  GATEIO disabled in config
+2025-11-07 19:48:45 | INFO     | src.services.exchange_connector:initialize:570 | ✅ Initialized 2 exchanges
+2025-11-07 19:48:45 | ERROR    | src.services.exchange_connector:test_connection:518 | ❌ BYBIT connection failed: bybit fetchStatus() is not supported yet
+2025-11-07 19:48:46 | INFO     | src.services.exchange_connector:test_connection:514 | ✅ KUCOIN connection OK
+2025-11-07 19:48:46 | INFO     | src.services.exchange_connector:close:525 | 🔌 BYBIT connection closed
+2025-11-07 19:48:46 | INFO     | src.services.exchange_connector:close:525 | 🔌 KUCOIN connection closed
+2025-11-07 19:48:46 | INFO     | src.services.exchange_connector:close_all:649 | 🔌 All exchange connections closed
+2025-11-07 19:48:46 | WARNING  | __main__:test_connections_async:332 | ⚠️  Failed connections: bybit
+2025-11-07 19:48:55 | INFO     | src.core.path_optimizer:__init__:74 | ⚡ PathOptimizer (PuLP): path_length=4, min_profit=1.5%
+2025-11-07 19:48:55 | DEBUG    | src.core.orderbook_analyzer:__init__:28 | 📊 OrderbookAnalyzer init: max_slippage=0.5%
+2025-11-07 19:48:55 | DEBUG    | src.core.amount_optimizer:__init__:58 | 💎 AmountOptimizer init: depth=20, max_slippage=0.5%
+2025-11-07 19:48:55 | DEBUG    | src.core.orderbook_analyzer:__init__:28 | 📊 OrderbookAnalyzer init: max_slippage=0.5%
+2025-11-07 19:48:55 | INFO     | src.core.arbitrage_engine:__init__:55 | ⚡ ArbitrageEngine v3: mode=ENHANCED (PathOpt + AmountOpt), min_profit=1.5%
+2025-11-07 19:48:55 | INFO     | __main__:_main_loop_async:132 | 🔍 Starting main loop (scan every 5s)
+2025-11-07 19:48:55 | INFO     | __main__:_main_loop_async:133 | ⚡ Auto-execute: ON
+2025-11-07 19:48:55 | INFO     | __main__:_main_loop_async:134 | 💎 Enhanced mode: THREE-STAGE (PathOpt → OrderbookCheck → AmountOpt)
+2025-11-07 19:48:55 | INFO     | __main__:_main_loop_async:143 | ━━━ Scan #1 ━━━
+2025-11-07 19:48:55 | DEBUG    | src.core.arbitrage_engine:_scan_enhanced_mode_async:108 | 🔍 Enhanced mode: PathOpt → OrderbookCheck → AmountOpt
+2025-11-07 19:48:55 | INFO     | src.core.path_optimizer:init_currency_info:99 | 🔄 Initializing currency info...
+2025-11-07 19:48:55 | INFO     | src.core.path_optimizer:init_currency_info:119 | ✅ Initialized 69 currencies across 2 exchanges
+2025-11-07 19:48:55 | INFO     | src.core.path_optimizer:_first_run_init:172 | 🔧 First run initialization...
+2025-11-07 19:48:55 | DEBUG    | src.core.path_optimizer:_update_fees_and_prices:184 | Updating fees and prices...
+2025-11-07 19:48:57 | INFO     | src.core.path_optimizer:_first_run_init:180 | ✅ First run init complete
+2025-11-07 19:48:57 | DEBUG    | src.core.path_optimizer:_update_fees_and_prices:184 | Updating fees and prices...
+2025-11-07 19:48:58 | DEBUG    | src.exchanges:get_balances:150 | Fetched balance from bybit: 0 currencies
+2025-11-07 19:48:58 | DEBUG    | src.exchanges:get_balances:150 | Fetched balance from kucoin: 0 currencies
+2025-11-07 19:48:59 | INFO     | src.core.path_optimizer:_solve_pulp:546 | 🔍 LP found path: BTC → USDT → CHZ → BTC
+2025-11-07 19:48:59 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:583 | === Simulating path with 3 steps ===
+2025-11-07 19:48:59 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:584 | Starting amount: 1.0
+2025-11-07 19:48:59 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:596 | 
+Step 1: BTC → USDT
+2025-11-07 19:48:59 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:597 |   Before: 1.00000000 BTC
+2025-11-07 19:48:59 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:598 |   Price: 102470.63508309
+2025-11-07 19:48:59 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:599 |   Fee: 0.1000%
+2025-11-07 19:48:59 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:606 |   After price: 102470.63508309
+2025-11-07 19:48:59 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:609 |   After fee: 102368.16444801 USDT
+2025-11-07 19:48:59 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:596 | 
+Step 2: USDT → CHZ
+2025-11-07 19:48:59 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:597 |   Before: 102368.16444801 USDT
+2025-11-07 19:48:59 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:598 |   Price: 29.46272144
+2025-11-07 19:48:59 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:599 |   Fee: 0.1000%
+2025-11-07 19:48:59 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:606 |   After price: 3016044.71358527
+2025-11-07 19:48:59 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:609 |   After fee: 3013028.66887168 CHZ
+2025-11-07 19:48:59 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:596 | 
+Step 3: CHZ → BTC
+2025-11-07 19:48:59 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:597 |   Before: 3013028.66887168 CHZ
+2025-11-07 19:48:59 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:598 |   Price: 0.00000033
+2025-11-07 19:48:59 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:599 |   Fee: 0.1000%
+2025-11-07 19:48:59 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:606 |   After price: 0.99510969
+2025-11-07 19:48:59 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:609 |   After fee: 0.99411458 BTC
+2025-11-07 19:48:59 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:613 | 
+=== Final result ===
+2025-11-07 19:48:59 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:614 | Final amount: 0.99411458
+2025-11-07 19:48:59 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:615 | Profit: -0.5885%
+2025-11-07 19:48:59 | INFO     | src.core.path_optimizer:_solve_pulp:554 | 📊 Simulated profit: -0.5885%
+2025-11-07 19:48:59 | DEBUG    | src.core.path_optimizer:_solve_pulp:566 | ⏭️  Profit -0.59% below threshold 1.5%
+2025-11-07 19:48:59 | DEBUG    | src.core.arbitrage_engine:_scan_enhanced_mode_async:120 | No paths found by PathOptimizer
+2025-11-07 19:48:59 | INFO     | __main__:_main_loop_async:149 | No opportunities found
+2025-11-07 19:49:04 | INFO     | __main__:_main_loop_async:143 | ━━━ Scan #2 ━━━
+2025-11-07 19:49:04 | DEBUG    | src.core.arbitrage_engine:_scan_enhanced_mode_async:108 | 🔍 Enhanced mode: PathOpt → OrderbookCheck → AmountOpt
+2025-11-07 19:49:05 | DEBUG    | src.exchanges:get_balances:150 | Fetched balance from bybit: 0 currencies
+2025-11-07 19:49:05 | DEBUG    | src.exchanges:get_balances:150 | Fetched balance from kucoin: 0 currencies
+2025-11-07 19:49:06 | INFO     | src.core.path_optimizer:_solve_pulp:546 | 🔍 LP found path: BTC → USDT → CHZ → BTC
+2025-11-07 19:49:06 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:583 | === Simulating path with 3 steps ===
+2025-11-07 19:49:06 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:584 | Starting amount: 1.0
+2025-11-07 19:49:06 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:596 | 
+Step 1: BTC → USDT
+2025-11-07 19:49:06 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:597 |   Before: 1.00000000 BTC
+2025-11-07 19:49:06 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:598 |   Price: 102458.94247674
+2025-11-07 19:49:06 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:599 |   Fee: 0.1000%
+2025-11-07 19:49:06 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:606 |   After price: 102458.94247674
+2025-11-07 19:49:06 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:609 |   After fee: 102356.48353426 USDT
+2025-11-07 19:49:06 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:596 | 
+Step 2: USDT → CHZ
+2025-11-07 19:49:06 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:597 |   Before: 102356.48353426 USDT
+2025-11-07 19:49:06 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:598 |   Price: 29.45487100
+2025-11-07 19:49:06 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:599 |   Fee: 0.1000%
+2025-11-07 19:49:06 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:606 |   After price: 3014897.01884154
+2025-11-07 19:49:06 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:609 |   After fee: 3011882.12182270 CHZ
+2025-11-07 19:49:06 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:596 | 
+Step 3: CHZ → BTC
+2025-11-07 19:49:06 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:597 |   Before: 3011882.12182270 CHZ
+2025-11-07 19:49:06 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:598 |   Price: 0.00000033
+2025-11-07 19:49:06 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:599 |   Fee: 0.1000%
+2025-11-07 19:49:06 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:606 |   After price: 0.99483106
+2025-11-07 19:49:06 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:609 |   After fee: 0.99383623 BTC
+2025-11-07 19:49:06 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:613 | 
+=== Final result ===
+2025-11-07 19:49:06 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:614 | Final amount: 0.99383623
+2025-11-07 19:49:06 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:615 | Profit: -0.6164%
+2025-11-07 19:49:06 | INFO     | src.core.path_optimizer:_solve_pulp:554 | 📊 Simulated profit: -0.6164%
+2025-11-07 19:49:06 | DEBUG    | src.core.path_optimizer:_solve_pulp:566 | ⏭️  Profit -0.62% below threshold 1.5%
+2025-11-07 19:49:06 | DEBUG    | src.core.arbitrage_engine:_scan_enhanced_mode_async:120 | No paths found by PathOptimizer
+2025-11-07 19:49:06 | INFO     | __main__:_main_loop_async:149 | No opportunities found
+2025-11-07 19:49:11 | INFO     | __main__:_main_loop_async:143 | ━━━ Scan #3 ━━━
+2025-11-07 19:49:11 | DEBUG    | src.core.arbitrage_engine:_scan_enhanced_mode_async:108 | 🔍 Enhanced mode: PathOpt → OrderbookCheck → AmountOpt
+2025-11-07 19:49:11 | DEBUG    | src.exchanges:get_balances:150 | Fetched balance from bybit: 0 currencies
+2025-11-07 19:49:12 | DEBUG    | src.exchanges:get_balances:150 | Fetched balance from kucoin: 0 currencies
+2025-11-07 19:49:13 | INFO     | src.core.path_optimizer:_solve_pulp:546 | 🔍 LP found path: BTC → USDT → CHZ → BTC
+2025-11-07 19:49:13 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:583 | === Simulating path with 3 steps ===
+2025-11-07 19:49:13 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:584 | Starting amount: 1.0
+2025-11-07 19:49:13 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:596 | 
+Step 1: BTC → USDT
+2025-11-07 19:49:13 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:597 |   Before: 1.00000000 BTC
+2025-11-07 19:49:13 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:598 |   Price: 102474.53221138
+2025-11-07 19:49:13 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:599 |   Fee: 0.1000%
+2025-11-07 19:49:13 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:606 |   After price: 102474.53221138
+2025-11-07 19:49:13 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:609 |   After fee: 102372.05767917 USDT
+2025-11-07 19:49:13 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:596 | 
+Step 2: USDT → CHZ
+2025-11-07 19:49:13 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:597 |   Before: 102372.05767917 USDT
+2025-11-07 19:49:13 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:598 |   Price: 29.47431140
+2025-11-07 19:49:13 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:599 |   Fee: 0.1000%
+2025-11-07 19:49:13 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:606 |   After price: 3017345.90663331
+2025-11-07 19:49:13 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:609 |   After fee: 3014328.56072668 CHZ
+2025-11-07 19:49:13 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:596 | 
+Step 3: CHZ → BTC
+2025-11-07 19:49:13 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:597 |   Before: 3014328.56072668 CHZ
+2025-11-07 19:49:13 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:598 |   Price: 0.00000033
+2025-11-07 19:49:13 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:599 |   Fee: 0.1000%
+2025-11-07 19:49:13 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:606 |   After price: 0.99530017
+2025-11-07 19:49:13 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:609 |   After fee: 0.99430487 BTC
+2025-11-07 19:49:13 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:613 | 
+=== Final result ===
+2025-11-07 19:49:13 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:614 | Final amount: 0.99430487
+2025-11-07 19:49:13 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:615 | Profit: -0.5695%
+2025-11-07 19:49:13 | INFO     | src.core.path_optimizer:_solve_pulp:554 | 📊 Simulated profit: -0.5695%
+2025-11-07 19:49:13 | DEBUG    | src.core.path_optimizer:_solve_pulp:566 | ⏭️  Profit -0.57% below threshold 1.5%
+2025-11-07 19:49:13 | DEBUG    | src.core.arbitrage_engine:_scan_enhanced_mode_async:120 | No paths found by PathOptimizer
+2025-11-07 19:49:13 | INFO     | __main__:_main_loop_async:149 | No opportunities found
+2025-11-07 19:49:18 | INFO     | __main__:_main_loop_async:143 | ━━━ Scan #4 ━━━
+2025-11-07 19:49:18 | DEBUG    | src.core.arbitrage_engine:_scan_enhanced_mode_async:108 | 🔍 Enhanced mode: PathOpt → OrderbookCheck → AmountOpt
+2025-11-07 19:49:18 | DEBUG    | src.exchanges:get_balances:150 | Fetched balance from bybit: 0 currencies
+2025-11-07 19:49:18 | DEBUG    | src.exchanges:get_balances:150 | Fetched balance from kucoin: 0 currencies
+2025-11-07 19:49:19 | INFO     | src.core.path_optimizer:_solve_pulp:546 | 🔍 LP found path: BTC → USDT → CHZ → BTC
+2025-11-07 19:49:19 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:583 | === Simulating path with 3 steps ===
+2025-11-07 19:49:19 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:584 | Starting amount: 1.0
+2025-11-07 19:49:19 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:596 | 
+Step 1: BTC → USDT
+2025-11-07 19:49:19 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:597 |   Before: 1.00000000 BTC
+2025-11-07 19:49:19 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:598 |   Price: 102398.66164904
+2025-11-07 19:49:19 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:599 |   Fee: 0.1000%
+2025-11-07 19:49:19 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:606 |   After price: 102398.66164904
+2025-11-07 19:49:19 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:609 |   After fee: 102296.26298739 USDT
+2025-11-07 19:49:19 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:596 | 
+Step 2: USDT → CHZ
+2025-11-07 19:49:19 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:597 |   Before: 102296.26298739 USDT
+2025-11-07 19:49:19 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:598 |   Price: 29.49845489
+2025-11-07 19:49:19 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:599 |   Fee: 0.1000%
+2025-11-07 19:49:19 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:606 |   After price: 3017581.69930900
+2025-11-07 19:49:19 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:609 |   After fee: 3014564.11760969 CHZ
+2025-11-07 19:49:19 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:596 | 
+Step 3: CHZ → BTC
+2025-11-07 19:49:19 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:597 |   Before: 3014564.11760969 CHZ
+2025-11-07 19:49:19 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:598 |   Price: 0.00000033
+2025-11-07 19:49:19 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:599 |   Fee: 0.1000%
+2025-11-07 19:49:19 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:606 |   After price: 0.99565678
+2025-11-07 19:49:19 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:609 |   After fee: 0.99466112 BTC
+2025-11-07 19:49:19 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:613 | 
+=== Final result ===
+2025-11-07 19:49:19 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:614 | Final amount: 0.99466112
+2025-11-07 19:49:19 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:615 | Profit: -0.5339%
+2025-11-07 19:49:19 | INFO     | src.core.path_optimizer:_solve_pulp:554 | 📊 Simulated profit: -0.5339%
+2025-11-07 19:49:19 | DEBUG    | src.core.path_optimizer:_solve_pulp:566 | ⏭️  Profit -0.53% below threshold 1.5%
+2025-11-07 19:49:19 | DEBUG    | src.core.arbitrage_engine:_scan_enhanced_mode_async:120 | No paths found by PathOptimizer
+2025-11-07 19:49:19 | INFO     | __main__:_main_loop_async:149 | No opportunities found
+2025-11-07 19:49:24 | INFO     | __main__:_main_loop_async:143 | ━━━ Scan #5 ━━━
+2025-11-07 19:49:24 | DEBUG    | src.core.arbitrage_engine:_scan_enhanced_mode_async:108 | 🔍 Enhanced mode: PathOpt → OrderbookCheck → AmountOpt
+2025-11-07 19:49:25 | DEBUG    | src.exchanges:get_balances:150 | Fetched balance from bybit: 0 currencies
+2025-11-07 19:49:25 | DEBUG    | src.exchanges:get_balances:150 | Fetched balance from kucoin: 0 currencies
+2025-11-07 19:49:26 | INFO     | src.core.path_optimizer:_solve_pulp:546 | 🔍 LP found path: BTC → USDT → CHZ → BTC
+2025-11-07 19:49:26 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:583 | === Simulating path with 3 steps ===
+2025-11-07 19:49:26 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:584 | Starting amount: 1.0
+2025-11-07 19:49:26 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:596 | 
+Step 1: BTC → USDT
+2025-11-07 19:49:26 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:597 |   Before: 1.00000000 BTC
+2025-11-07 19:49:26 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:598 |   Price: 102384.69709043
+2025-11-07 19:49:26 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:599 |   Fee: 0.1000%
+2025-11-07 19:49:26 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:606 |   After price: 102384.69709043
+2025-11-07 19:49:26 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:609 |   After fee: 102282.31239334 USDT
+2025-11-07 19:49:26 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:596 | 
+Step 2: USDT → CHZ
+2025-11-07 19:49:26 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:597 |   Before: 102282.31239334 USDT
+2025-11-07 19:49:26 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:598 |   Price: 29.52725911
+2025-11-07 19:49:26 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:599 |   Fee: 0.1000%
+2025-11-07 19:49:26 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:606 |   After price: 3020116.34007830
+2025-11-07 19:49:26 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:609 |   After fee: 3017096.22373822 CHZ
+2025-11-07 19:49:26 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:596 | 
+Step 3: CHZ → BTC
+2025-11-07 19:49:26 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:597 |   Before: 3017096.22373822 CHZ
+2025-11-07 19:49:26 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:598 |   Price: 0.00000033
+2025-11-07 19:49:26 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:599 |   Fee: 0.1000%
+2025-11-07 19:49:26 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:606 |   After price: 0.99567817
+2025-11-07 19:49:26 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:609 |   After fee: 0.99468249 BTC
+2025-11-07 19:49:26 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:613 | 
+=== Final result ===
+2025-11-07 19:49:26 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:614 | Final amount: 0.99468249
+2025-11-07 19:49:26 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:615 | Profit: -0.5318%
+2025-11-07 19:49:26 | INFO     | src.core.path_optimizer:_solve_pulp:554 | 📊 Simulated profit: -0.5318%
+2025-11-07 19:49:26 | DEBUG    | src.core.path_optimizer:_solve_pulp:566 | ⏭️  Profit -0.53% below threshold 1.5%
+2025-11-07 19:49:26 | DEBUG    | src.core.arbitrage_engine:_scan_enhanced_mode_async:120 | No paths found by PathOptimizer
+2025-11-07 19:49:26 | INFO     | __main__:_main_loop_async:149 | No opportunities found
+2025-11-07 19:49:31 | INFO     | __main__:_main_loop_async:143 | ━━━ Scan #6 ━━━
+2025-11-07 19:49:31 | DEBUG    | src.core.arbitrage_engine:_scan_enhanced_mode_async:108 | 🔍 Enhanced mode: PathOpt → OrderbookCheck → AmountOpt
+2025-11-07 19:49:31 | DEBUG    | src.exchanges:get_balances:150 | Fetched balance from bybit: 0 currencies
+2025-11-07 19:49:32 | DEBUG    | src.exchanges:get_balances:150 | Fetched balance from kucoin: 0 currencies
+2025-11-07 19:49:34 | INFO     | src.core.path_optimizer:_solve_pulp:546 | 🔍 LP found path: BTC → USDT → CHZ → BTC
+2025-11-07 19:49:34 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:583 | === Simulating path with 3 steps ===
+2025-11-07 19:49:34 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:584 | Starting amount: 1.0
+2025-11-07 19:49:34 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:596 | 
+Step 1: BTC → USDT
+2025-11-07 19:49:34 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:597 |   Before: 1.00000000 BTC
+2025-11-07 19:49:34 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:598 |   Price: 102416.52016465
+2025-11-07 19:49:34 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:599 |   Fee: 0.1000%
+2025-11-07 19:49:34 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:606 |   After price: 102416.52016465
+2025-11-07 19:49:34 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:609 |   After fee: 102314.10364449 USDT
+2025-11-07 19:49:34 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:596 | 
+Step 2: USDT → CHZ
+2025-11-07 19:49:34 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:597 |   Before: 102314.10364449 USDT
+2025-11-07 19:49:34 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:598 |   Price: 29.52757812
+2025-11-07 19:49:34 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:599 |   Fee: 0.1000%
+2025-11-07 19:49:34 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:606 |   After price: 3021087.68841208
+2025-11-07 19:49:34 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:609 |   After fee: 3018066.60072367 CHZ
+2025-11-07 19:49:34 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:596 | 
+Step 3: CHZ → BTC
+2025-11-07 19:49:34 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:597 |   Before: 3018066.60072367 CHZ
+2025-11-07 19:49:34 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:598 |   Price: 0.00000033
+2025-11-07 19:49:34 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:599 |   Fee: 0.1000%
+2025-11-07 19:49:34 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:606 |   After price: 0.99534553
+2025-11-07 19:49:34 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:609 |   After fee: 0.99435019 BTC
+2025-11-07 19:49:34 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:613 | 
+=== Final result ===
+2025-11-07 19:49:34 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:614 | Final amount: 0.99435019
+2025-11-07 19:49:34 | DEBUG    | src.core.path_optimizer:_simulate_path_profit:615 | Profit: -0.5650%
+2025-11-07 19:49:34 | INFO     | src.core.path_optimizer:_solve_pulp:554 | 📊 Simulated profit: -0.5650%
+2025-11-07 19:49:34 | DEBUG    | src.core.path_optimizer:_solve_pulp:566 | ⏭️  Profit -0.56% below threshold 1.5%
+2025-11-07 19:49:34 | DEBUG    | src.core.arbitrage_engine:_scan_enhanced_mode_async:120 | No paths found by PathOptimizer
+2025-11-07 19:49:34 | INFO     | __main__:_main_loop_async:149 | No opportunities found
+2025-11-07 19:49:35 | INFO     | __main__:stop:296 | ⏹️  Stopping bot...
+2025-11-07 19:49:35 | INFO     | __main__:stop:298 | ✅ Bot stopped
+2025-11-07 19:49:35 | INFO     | __main__:start:63 | ⏸️  Bot stopped by user
